@@ -3,3 +3,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  --color-footer-header: #e9ded4; /* Серый в шапке и футереы */
+  --color-red: #f54932; /* Красный для акцентов и бегущей строки */
+  --color-dark: #313131; /* Почти черный для текста и кнопок */
+  --color-blue: #3057a2; /* Синий для ссылок */
+
+  /* Шрифты */
+  --font-header: "Merriweather", serif;
+  --font-text: "Golos Text", sans-serif;
+}
