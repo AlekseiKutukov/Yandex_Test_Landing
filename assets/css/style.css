@@ -24,6 +24,29 @@ body {
   padding: 0 20px;
 }
 
+img {
+  width: 100%;
+  height: 100%;
+}
+
+h3 {
+  font-family: var(--font-header);
+  font-size: 36px;
+  line-height: 1.35;
+  text-transform: uppercase;
+  color: var(--color-dark);
+  font-weight: 400;
+}
+
+.title span {
+  font-weight: 700;
+  color: var(--color-red);
+}
+
+section {
+  padding: 0 72px;
+}
+
 .logo {
   display: flex;
   align-items: center;
@@ -160,4 +183,25 @@ body {
   100% {
     transform: translateX(-50%); /* Сдвигаем ровно на половину длины wrapper */
   }
+}
+
+/* Секция про лекцию */
+.lecture {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 64px;
+  margin-top: 80px;
+}
+
+.lecture__image {
+  width: 394px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.lecture__image img {
+  object-fit: cover;
 }
