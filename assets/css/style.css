@@ -29,7 +29,7 @@ img {
   height: 100%;
 }
 
-h3 {
+h2 {
   font-family: var(--font-header);
   font-size: 36px;
   line-height: 1.35;
@@ -287,4 +287,33 @@ section {
 
 .session__link:hover {
   opacity: 0.8;
+}
+
+/*  Этапы преображения Васюков */
+
+.steps__title-wrap {
+  padding-top: 200px;
+}
+.steps__main-title {
+  margin: 0;
+  font-family: var(--font-header);
+  font-size: 54px;
+  line-height: 1.2;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--color-dark);
+}
+
+.steps__bottom-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 18px;
+}
+
+.steps__side-text {
+  margin: 0 0 10px 0;
+  font-family: var(--font-text);
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--color-blue);
 }
