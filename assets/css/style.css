@@ -205,3 +205,74 @@ section {
 .lecture__image img {
   object-fit: cover;
 }
+
+/* Секция про Остапа Бендера */
+.session {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 17px;
+  margin-top: 64px;
+}
+
+.session__image img {
+  width: 528px;
+  height: 609px;
+  margin-top: -40px;
+}
+
+/* Основной контейнер таблицы */
+.session__table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 60px;
+}
+
+.table__cell {
+  padding: 16px 0;
+  border-bottom: 2px solid #d0d0d0;
+  font-family: var(--font-text);
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--color-dark);
+  vertical-align: middle;
+}
+
+.table__cell--label {
+  font-weight: 400;
+  opacity: 0.7;
+  border-right: 2px solid #d0d0d0;
+  padding-right: 16px;
+  width: 306px;
+}
+
+.table__cell--value {
+  font-weight: 600;
+  padding-left: 16px;
+}
+
+.table__row:last-child .table__cell {
+  border-bottom: none;
+}
+
+.table__old-price {
+  text-decoration: line-through;
+  text-decoration-color: var(--color-red);
+  margin-right: 10px;
+}
+
+.session__link {
+  display: inline-block;
+  font-family: var(--font-text);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--color-blue);
+  text-decoration: none;
+  margin-top: 48px;
+  transition: color 0.2s ease;
+}
+
+.session__link:hover {
+  opacity: 0.8;
+}
