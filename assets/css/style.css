@@ -126,3 +126,38 @@ body {
   background-color: var(--color-dark);
   color: var(--color-white);
 }
+
+/* Бегущая строка */
+.run {
+  width: 100%;
+  background-color: var(--color-red);
+  color: #fff;
+  padding: 18px 0;
+  overflow: hidden; /* Прячем текст, который выходит за границы экрана */
+  display: flex;
+  align-items: center;
+}
+
+.run__wrapper {
+  display: flex;
+  white-space: nowrap;
+  will-change: transform; /* Оптимизация для плавности анимации */
+  animation: run-scroll 20s linear infinite; /* 20 секунд на полный круг */
+}
+
+.run__item {
+  font-family: var(--font-header);
+  font-size: 22px;
+  text-transform: uppercase;
+  padding-right: 10px; /* Небольшой зазор между копиями */
+}
+
+/* Ключевые кадры для анимации */
+@keyframes run-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Сдвигаем ровно на половину длины wrapper */
+  }
+}
