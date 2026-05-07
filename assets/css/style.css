@@ -13,3 +13,116 @@
   --font-header: "Merriweather", serif;
   --font-text: "Golos Text", sans-serif;
 }
+
+body {
+  max-width: 1360px;
+  margin: 0 auto;
+}
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.logo__icon {
+  display: flex;
+}
+
+.logo__horse {
+  width: 22px;
+  height: auto;
+}
+
+.logo__horse:last-child {
+  margin-right: 0;
+}
+
+.logo__text {
+  font-family: var(--font-text);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1;
+  color: var(--color-dark);
+}
+
+.top {
+  position: relative;
+  padding-bottom: 130px;
+  background-image: url("../images/top-bg.webp");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+.header {
+  padding: 26px 0;
+}
+
+.top__content {
+  max-width: 542px;
+  margin-top: 62px;
+}
+
+.top__title {
+  font-family: var(--font-header);
+  font-size: 60px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.top__subtitle {
+  font-size: 18px;
+  line-height: 1.3;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Кнопки */
+.top__actions {
+  display: flex;
+  gap: 16px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 44px;
+  border-radius: 66px;
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+  transition:
+    background 0.3s,
+    color 0.3s;
+  text-align: center;
+}
+
+.btn--dark {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+}
+
+.btn--dark:hover {
+  background-color: var(--color-yellow);
+  color: var(--color-dark);
+}
+
+.btn--outline {
+  border: 2px solid var(--color-dark);
+  color: var(--color-dark);
+}
+
+.btn--outline:hover {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+}

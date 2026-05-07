@@ -1,26 +1,48 @@
-<!-- Подключение стилей в <head> -->
-<link rel="stylesheet" href="assets/css/style.css" />
-
-<!-- Подключение скрипта перед закрывающим </body> -->
-<script src="assets/js/script.js"></script>
-
 <!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Клуб четырех коней</title>
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=Merriweather:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <header class="header">
+    <section class="top">
+      <header class="header">
+        <div class="container">
+          <a href="/" class="logo">
+            <div class="logo__icon">
+              <img src="assets/images/horse.svg" alt="" class="logo__horse" />
+              <img src="assets/images/horse.svg" alt="" class="logo__horse" />
+              <img src="assets/images/horse.svg" alt="" class="logo__horse" />
+              <img src="assets/images/horse.svg" alt="" class="logo__horse" />
+            </div>
+            <span class="logo__text">Клуб<br />четырех коней</span>
+          </a>
+        </div>
+      </header>
+
       <div class="container">
-        <a href="#" class="logo">
-          <img src="assets/images/logo.svg" alt="Логотип" />
-        </a>
+        <div class="top__content">
+          <h1 class="top__title">
+            Превратите уездный город <span class="text-center">в столицу</span>
+            <span class="text-right">земного шара</span>
+          </h1>
+          <p class="top__subtitle">
+            Оплатите взнос на телеграммы для организации Международного
+            васюкинского турнира по шахматам
+          </p>
+          <div class="top__actions">
+            <a href="#about" class="btn btn--dark">Подержать шахматную мысль</a>
+            <a href="#steps" class="btn btn--outline">Подробнее о турнире</a>
+          </div>
+        </div>
       </div>
-    </header>
+    </section>
 
     <main>
       <section class="top">
