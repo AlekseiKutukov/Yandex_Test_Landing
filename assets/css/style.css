@@ -317,3 +317,70 @@ section {
   line-height: 1.2;
   color: var(--color-blue);
 }
+
+/*  Grids */
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+  grid-template-rows: auto auto auto; /* 3 ряда */
+  gap: 20px;
+  position: relative; /* Для позиционирования самолета */
+  font-family: var(--font-text);
+  font-size: 20px;
+  padding-top: 54px;
+  color: var(--color-dark);
+}
+
+.step-num {
+  background: #ffffff;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  flex-shrink: 0;
+  line-height: 1.2;
+}
+
+.step-text {
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.step-card {
+  background-image: url("../images/bg/Stamp-Paper.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  min-height: 112px;
+}
+
+/* Настройка объединения ячеек */
+.item-3 {
+  grid-row: span 2;
+} /* Карточка 3 занимает 2 ряда по высоте */
+.item-7 {
+  grid-column: span 2;
+} /* Карточка 7 занимает 2 колонки в ширину */
+
+.item-7 .step-text {
+  max-width: 410px;
+}
+
+/* Позиционирование самолета */
+
+.steps-airplane {
+  position: absolute;
+  z-index: 2;
+  right: -63px;
+  bottom: 0;
+  width: 402px;
+  height: auto;
+}
