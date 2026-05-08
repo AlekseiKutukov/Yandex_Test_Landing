@@ -8,7 +8,7 @@
       href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=Merriweather:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <section class="top">
@@ -205,10 +205,21 @@
       </section>
 
       <!-- Участники турнира -->
-      <section class="participants" id="participants">
-        <div class="container">
-          <h3 class="section-title">Участники турнира</h3>
+
+      <section class="tournament" id="participants">
+        <div class="tournament__top">
+          <h3 class="tournament__title">Участники турнира</h3>
+
+          <div class="tournament__slider-control">
+            <button class="slider-btn btn-prev" aria-label="Назад"></button>
+            <div class="slider-counter">
+              <span class="current">3</span>/<span class="total">6</span>
+            </div>
+
+            <button class="slider-btn btn-next" aria-label="Вперед"></button>
+          </div>
         </div>
+        <div class="participants__list"></div>
       </section>
     </main>
 
@@ -217,6 +228,7 @@
     </footer>
 
     <!-- Подключаем логику -->
-    <script src="assets/js/script.js"></script>
+    <script src="./js/data.js"></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>

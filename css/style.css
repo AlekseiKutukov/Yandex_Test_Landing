@@ -57,7 +57,7 @@ section {
 .logo__icon {
   width: 92px;
   height: 31px;
-  background-image: url("../images/logo/horse.svg");
+  background-image: url("../assets/images/logo/horse.svg");
   background-repeat: repeat-x;
   background-size: 23px 31px;
   flex-shrink: 0;
@@ -73,7 +73,7 @@ section {
 
 .top {
   min-height: 700px;
-  background-image: url("../images/bg/header.png");
+  background-image: url("../assets/images/bg/header.png");
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover;
@@ -294,7 +294,8 @@ section {
 .steps__title-wrap {
   padding-top: 200px;
 }
-.steps__main-title {
+.steps__main-title,
+.tournament__title {
   margin: 0;
   font-family: var(--font-header);
   font-size: 54px;
@@ -351,7 +352,7 @@ section {
 }
 
 .step-card {
-  background-image: url("../images/bg/Stamp-Paper.png");
+  background-image: url("../assets/images/bg/Stamp-Paper.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -375,7 +376,6 @@ section {
 }
 
 /* Позиционирование самолета */
-
 .steps-airplane {
   position: absolute;
   z-index: 2;
@@ -383,4 +383,108 @@ section {
   bottom: 0;
   width: 402px;
   height: auto;
+}
+
+/* Участники турнира */
+
+.tournament__top {
+  display: flex;
+  margin-top: 200px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tournament__slider-control {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.btn-prev,
+.btn-next {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: var(--color-dark);
+}
+
+.btn-next {
+  background-image: url("../assets/images/icons/right.png");
+}
+
+.btn-prev {
+  background-image: url("../assets/images/icons/left.png");
+}
+
+.btn-prev:hover,
+.btn-next:hover {
+  background-color: #fbce51;
+}
+
+/* Отключенное состояние (Disabled) */
+/* .btn-prev:disabled,
+.btn-next:disabled {
+  background-color: #d6d6d6; 
+  cursor: default;
+} */
+
+/* Персонажи */
+
+.participants__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Чтобы карточки переносились на мобилках */
+  padding: 40px 0;
+}
+
+.participant-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: var(--font-text);
+  width: 394px;
+}
+
+.participant-card__avatar {
+  border-radius: 50%;
+  margin-bottom: 28px;
+}
+
+.participant-card__name {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--color-dark);
+  margin: 0 0 6px 0;
+}
+
+.participant-card__status {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--color-dark);
+  opacity: 0.6;
+  margin: 0 0 20px 0;
+}
+
+.participant-card__btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border: 1px solid var(--color-blue);
+  border-radius: 62px;
+  color: var(--color-blue);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.participant-card__btn:hover {
+  background-color: var(--color-blue);
+  color: #ffffff;
 }
