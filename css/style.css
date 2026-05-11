@@ -24,6 +24,10 @@ img {
   height: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 h2 {
   font-family: var(--font-header);
   font-size: 36px;
@@ -380,6 +384,10 @@ section {
   height: auto;
 }
 
+.mobile-only {
+  display: none;
+}
+
 /* Участники турнира */
 
 .tournament__top {
@@ -396,7 +404,9 @@ section {
 }
 
 .btn-prev,
-.btn-next {
+.btn-next,
+.btn-prev-step,
+.btn-next-step {
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -408,30 +418,35 @@ section {
   background-color: var(--color-dark);
 }
 
-.btn-next {
+.btn-next,
+.btn-next-step {
   background-image: url("../assets/images/icons/right.png");
 }
 
-.btn-prev {
+.btn-prev,
+.btn-prev-step {
   background-image: url("../assets/images/icons/left.png");
 }
 
 .btn-prev:hover,
-.btn-next:hover {
+.btn-next:hover,
+.btn-prev-step:hover,
+.btn-next-step:hover {
   background-color: #fbce51;
 }
 
 /* Отключенное состояние (Disabled) */
-/* .btn-prev:disabled,
-.btn-next:disabled {
-  background-color: #d6d6d6; 
+.btn-prev-step:disabled,
+.btn-next-step:disabled {
+  background-color: #d6d6d6;
   cursor: default;
-} */
+}
 
 /* Персонажи */
 
 /* Окно, которое скрывает лишние карточки */
-.participants__list {
+.participants__list,
+.steps__list {
   overflow: hidden;
   width: 100%;
   padding: 40px 0;
@@ -505,10 +520,183 @@ section {
   color: var(--color-dark);
   opacity: 0.7;
 }
+/* Мобиьный вид */
 
-/* На мобилках показываем по 1 карточке */
+@media (min-width: 1001px) {
+  .step-slide-wrapper {
+    display: contents;
+  }
+}
+
 @media (max-width: 1000px) {
+  /* На мобилках показываем по 1 карточке */
   .participant-card {
     flex: 0 0 100%;
+  }
+
+  section {
+    padding: 0 20px;
+  }
+
+  .mobile-only {
+    display: flex;
+  }
+
+  .steps__list {
+    padding-top: 148px;
+  }
+
+  .steps-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    transition: transform 0.4s ease-in-out;
+    gap: 0;
+    width: 100%;
+  }
+
+  .item-3,
+  .item-7 {
+    grid-row: auto;
+    grid-column: auto;
+  }
+
+  .item-7 .step-text {
+    max-width: 100%;
+  }
+
+  .step-card {
+    background-image: none;
+  }
+
+  /* Обертка и одиночные карточки становятся слайдами */
+  .step-slide-wrapper,
+  .step-card.item-3,
+  .step-card.item-6,
+  .step-card.item-7 {
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-image: url("../assets/images/bg/Stamp-Paper.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .step-card.item-3,
+  .step-card.item-6,
+  .step-card.item-7 {
+    flex-direction: inherit;
+  }
+
+  .step-card {
+    width: 100%;
+    min-height: auto;
+    padding: 30px 20px;
+  }
+
+  .steps-airplane {
+    top: -120px;
+    right: 0;
+    width: 400px;
+    transform: translateY(0);
+    z-index: 5;
+  }
+
+  /* Стили для кнопок и точек */
+  .steps__slider-controls {
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 28px;
+  }
+
+  .steps__dots {
+    display: flex;
+    gap: 6px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    background: #d9d9d9;
+    border-radius: 50%;
+  }
+
+  .dot.active {
+    background: #313131;
+  }
+
+  .top__title {
+    font-size: 36px;
+  }
+
+  .top__subtitle {
+    text-align: left;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .top__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .btn--secondary {
+    opacity: 0.9;
+    background-color: #ffffff;
+  }
+
+  .lecture,
+  .session,
+  .tournament__top {
+    flex-direction: column;
+  }
+
+  .session__table,
+  .session__table tbody,
+  .table__row,
+  .table__cell {
+    display: block;
+    width: 100%;
+  }
+
+  .table__row {
+    padding: 16px 0;
+  }
+
+  /* Табллица*/
+  .table__row:last-child {
+    border-bottom: none;
+  }
+
+  .table__cell {
+    padding: 0;
+    border-bottom: none;
+  }
+
+  .table__cell--label {
+    border-right: none;
+    color: #313131;
+    opacity: 0.7;
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .table__cell--value {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #313131;
+    border-bottom: 2px solid #d0d0d0;
+    padding-bottom: 10px;
+  }
+
+  .steps__bottom-row {
+    flex-direction: column;
+    align-items: baseline;
   }
 }
